@@ -1,0 +1,32 @@
+apiVersion: "acid.zalan.do/v1"
+kind: postgresql
+metadata:
+  name: acid-app
+spec:
+  teamId: "acid"
+  volume:
+    size: 10Gi
+  numberOfInstances: 2
+  users:
+    admin:  # database owner
+    - superuser
+    app: # roles for application foo
+    - createdb
+  databases:
+    app: app  # dbname: owner
+  enableMasterLoadBalancer: false
+  enableReplicaLoadBalancer: false
+  postgresql:
+    version: '16'
+    # parameters:
+    #   wal_keep_segments: 8
+  # https://github.com/zalando/postgres-operator/blob/f9150aa6db85e6b7d18553f2d104dcb7b43d69dc/manifests/complete-postgres-manifest.yaml#L181
+  spiloFSGroup: 103
+  tls:
+    # caSecretName: "zammad-ca-key-pair"
+    caFile: "ca.crt" # add this if the secret is configured with a CA
+    secretName: "app-tls"
+  tolerations:
+  - key: storage
+    operator: Exists
+    effect: PreferNoSchedule

@@ -1,0 +1,15 @@
+# See https://twenty.com/developers/section/self-hosting/setup
+
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  # NODE_TLS_REJECT_UNAUTHORIZED: "0"
+  SERVER_URL: "https://crm.i.wheelmap.tech:443"
+  PG_DATABASE_URL: "postgres://postgres@acid-twentycrm.twentycrm.svc.cluster.local/twenty"
+  REDIS_URL: "redis://twentycrm-redis.twentycrm.svc.cluster.local:6379"
+  SIGN_IN_PREFILLED: "false"
+  STORAGE_TYPE: "local"
+  ACCESS_TOKEN_EXPIRES_IN: "7d"
+  LOGIN_TOKEN_EXPIRES_IN: "1h"

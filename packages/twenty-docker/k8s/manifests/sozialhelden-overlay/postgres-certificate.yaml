@@ -1,0 +1,12 @@
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: app-tls
+spec:
+  dnsNames:
+  - 'app.twentycrm.svc.cluster.local'
+  issuerRef:
+    kind: Issuer
+    name: ca-issuer
+  secretName: app-tls
+
