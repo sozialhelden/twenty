@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: twentycrm-docker-data-pv
 spec:
-  storageClassName: default
+  storageClassName: do-block-storage
   capacity:
     storage: 100Mi
   accessModes:

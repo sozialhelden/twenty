@@ -4,7 +4,7 @@ metadata:
   name: twentycrm-server-pv
   namespace: twentycrm
 spec:
-  storageClassName: default
+  storageClassName: do-block-storage
   capacity:
     storage: 10Gi
   accessModes:
