@@ -18,6 +18,17 @@ spec:
       labels:
         app: twentycrm-server
     spec:
+      initContainers:
+        - name: init-container
+          image: busybox
+          command:
+            - sh
+            - -c
+            - |
+              mkdir -p /app/docker-data && chown -R 1000:1000 /app/docker-data
+          volumeMounts:
+            - mountPath: /app/docker-data
+              name: twentycrm-docker-data
       containers:
         - name: twentycrm
           image: twentycrm/twenty:latest
