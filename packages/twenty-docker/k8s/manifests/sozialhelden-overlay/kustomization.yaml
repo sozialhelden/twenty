@@ -2,18 +2,6 @@
 # https://github.com/sozialhelden/twenty/tree/main/packages/twenty-docker/k8s/manifests
 # https://twenty.com/developers/section/self-hosting
 
-resources:
-
-# The following resources are from the original Twenty deployment.
-- ../deployment-redis.yaml
-- ../deployment-server.yaml
-- ../deployment-worker.yaml
-- ../ingress.yaml
-- ../pv-docker-data.yaml
-- ../pv-server.yaml
-- ../pvc-docker-data.yaml
-- ../pvc-server.yaml
-- ../service-server.yaml
 
 # The following resources are Sozialhelden e.V.-specific customizations
 # for the Docker deployment.
@@ -23,6 +11,8 @@ resources:
 # - a custom Redis deployment
 # - a custom CA + TLS setup for PostgreSQL
 
+resources:
+- ..
 - app-config.yaml
 - ca-cert.yaml
 - ca-issuer.yaml

@@ -1,0 +1,13 @@
+
+resources:
+
+# The following resources are from the original Twenty deployment.
+- deployment-redis.yaml
+- deployment-server.yaml
+- deployment-worker.yaml
+- ingress.yaml
+- pv-docker-data.yaml
+- pv-server.yaml
+- pvc-docker-data.yaml
+- pvc-server.yaml
+- service-server.yaml
