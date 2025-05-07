@@ -7,8 +7,3 @@ metadata:
 data:
   # NODE_TLS_REJECT_UNAUTHORIZED: "0"
   SERVER_URL: "https://crm.i.wheelmap.tech:443"
-  # PG_DATABASE_URL: "postgres://acid-app.twentycrm.svc.cluster.local/app"
-  PGHOST: "acid-app.twentycrm.svc.cluster.local"
-  PGDATABASE: "app"
-  PGPORT: "5432"
-  REDIS_URL: "redis://twentycrm-redis-master.twentycrm.svc.cluster.local:6379"
