@@ -18,6 +18,8 @@ spec:
       app: twentycrm-server
   template:
     metadata:
+      annotations:
+        linkerd.io/inject: "enabled"
       labels:
         app: twentycrm-server
     spec:
