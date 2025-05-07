@@ -23,13 +23,6 @@ spec:
       labels:
         app: twentycrm-server
     spec:
-      volumes:
-        - name: twentycrm-server-data
-          persistentVolumeClaim:
-            claimName: twentycrm-server-pvc
-        - name: twentycrm-docker-data
-          persistentVolumeClaim:
-            claimName: twentycrm-docker-data-pvc
       containers:
         - name: twentycrm
           image: twentycrm/twenty:latest
@@ -83,3 +76,18 @@ spec:
               name: twentycrm-server-data
       dnsPolicy: ClusterFirst
       restartPolicy: Always
+  volumeClaimTemplates:
+  - metadata:
+      name: twentycrm-docker-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 10Gi
+  - metadata:
+      name: twentycrm-server-data
+    spec:
+      accessModes: [ "ReadWriteOnce" ]
+      resources:
+        requests:
+          storage: 10Gi
