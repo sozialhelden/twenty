@@ -7,3 +7,4 @@ metadata:
 data:
   # NODE_TLS_REJECT_UNAUTHORIZED: "0"
   SERVER_URL: "https://crm.i.wheelmap.tech:443"
+  REDIS_URL: "redis://twentycrm-redis-master:6379"
