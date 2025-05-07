@@ -25,10 +25,12 @@ spec:
             - sh
             - -c
             - |
-              mkdir -p /app/docker-data && chown -R 1000:1000 /app/docker-data
+              mkdir -p /app/docker-data && chown -R 1000:1000 /app/docker-data && mkdir -p /app/packages/twenty-server/.local-storage && chown -R 1000:1000 /app/packages/twenty-server/.local-storage
           volumeMounts:
             - mountPath: /app/docker-data
               name: twentycrm-docker-data
+            - mountPath: /app/packages/twenty-server/.local-storage
+              name: twentycrm-server-data
       containers:
         - name: twentycrm
           image: twentycrm/twenty:latest
