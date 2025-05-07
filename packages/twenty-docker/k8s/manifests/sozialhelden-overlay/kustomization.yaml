@@ -23,7 +23,12 @@ resources:
 # - a custom Redis deployment
 # - a custom CA + TLS setup for PostgreSQL
 
-- ../postgresql.yaml
-- ../redis.yaml
+- app-config.yaml
+- ca-cert.yaml
+- ca-issuer.yaml
+- postgresql-certificate.yaml
+- postgresql-database.yaml
+- redis-app.yaml
+- self-signed-issuer.yaml
 
 namespace: twentycrm
