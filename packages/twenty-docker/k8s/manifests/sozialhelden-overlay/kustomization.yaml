@@ -16,6 +16,5 @@ resources:
 - ca-issuer.yaml
 - postgresql-certificate.yaml
 - postgresql-database.yaml
-- redis-app.yaml
 - self-signed-issuer.yaml
 - twentycrm-env.yaml
