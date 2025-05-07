@@ -35,12 +35,6 @@ spec:
           env:
             - name: NODE_PORT
               value: 3000
-            - name: SERVER_URL
-              value: "https://crm.example.com:443"
-            - name: "PG_DATABASE_URL"
-              value: "postgres://postgres:postgres@twentycrm-db.twentycrm.svc.cluster.local/default"
-            - name: "REDIS_URL"
-              value: "redis://twentycrm-redis.twentycrm.svc.cluster.local:6379"
             - name: SIGN_IN_PREFILLED
               value: "false"
             - name: STORAGE_TYPE
@@ -54,6 +48,9 @@ spec:
                 secretKeyRef:
                   name: tokens
                   key: accessToken
+          envFrom:
+            - configMapRef:
+                name: twentycrm-env
           ports:
             - containerPort: 3000
               name: http-tcp
