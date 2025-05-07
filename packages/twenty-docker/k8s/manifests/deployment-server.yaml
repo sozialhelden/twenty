@@ -34,7 +34,7 @@ spec:
           imagePullPolicy: Always
           env:
             - name: NODE_PORT
-              value: 3000
+              value: "3000"
             - name: SIGN_IN_PREFILLED
               value: "false"
             - name: STORAGE_TYPE
