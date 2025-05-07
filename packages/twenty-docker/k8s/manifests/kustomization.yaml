@@ -2,7 +2,6 @@
 resources:
 
 # The following resources are from the original Twenty deployment.
-- deployment-redis.yaml
 - deployment-server.yaml
 - deployment-worker.yaml
 - ingress.yaml
