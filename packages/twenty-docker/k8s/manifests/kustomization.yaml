@@ -2,7 +2,7 @@
 resources:
 
 # The following resources are from the original Twenty deployment.
-- deployment-server.yaml
+- statefulset-server.yaml
 - deployment-worker.yaml
 - ingress.yaml
 # - pv-docker-data.yaml

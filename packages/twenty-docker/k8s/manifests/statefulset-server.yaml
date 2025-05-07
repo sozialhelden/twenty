@@ -1,11 +1,12 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: StatefulSet
 metadata:
   labels:
     app: twentycrm-server
   name: twentycrm-server
   namespace: twentycrm
 spec:
+  serviceName: twentycrm-headless      # must exist (ClusterIP=None)
   progressDeadlineSeconds: 600
   replicas: 1
   strategy:
