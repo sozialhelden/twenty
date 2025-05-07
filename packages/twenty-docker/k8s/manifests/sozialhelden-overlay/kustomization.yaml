@@ -12,7 +12,6 @@
 # - a custom CA + TLS setup for PostgreSQL
 
 resources:
-- ..
 - app-config.yaml
 - ca-cert.yaml
 - ca-issuer.yaml
@@ -20,5 +19,3 @@ resources:
 - postgresql-database.yaml
 - redis-app.yaml
 - self-signed-issuer.yaml
-
-namespace: twentycrm

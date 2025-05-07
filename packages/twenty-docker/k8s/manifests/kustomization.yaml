@@ -11,3 +11,6 @@ resources:
 - pvc-docker-data.yaml
 - pvc-server.yaml
 - service-server.yaml
+- ./sozialhelden-overlay
+
+namespace: twentycrm
