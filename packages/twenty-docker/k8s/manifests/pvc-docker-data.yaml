@@ -4,8 +4,6 @@ metadata:
   name: twentycrm-docker-data-pvc
   namespace: twentycrm
 spec:
-  storageClassName: default
-  volumeName: twentycrm-docker-data-pv
   accessModes:
     - ReadWriteOnce
   resources:

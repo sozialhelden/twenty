@@ -4,7 +4,6 @@ metadata:
   name: twentycrm-server-pvc
   namespace: twentycrm
 spec:
-  storageClassName: default
   volumeName: twentycrm-server-pv
   accessModes:
     - ReadWriteOnce
