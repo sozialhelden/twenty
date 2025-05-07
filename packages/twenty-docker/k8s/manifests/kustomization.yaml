@@ -5,8 +5,8 @@ resources:
 - deployment-server.yaml
 - deployment-worker.yaml
 - ingress.yaml
-# - pv-docker-data.yaml
-# - pv-server.yaml
+- pv-docker-data.yaml
+- pv-server.yaml
 - pvc-docker-data.yaml
 - pvc-server.yaml
 - service-server.yaml
