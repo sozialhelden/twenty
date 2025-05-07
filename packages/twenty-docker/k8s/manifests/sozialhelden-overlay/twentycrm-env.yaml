@@ -9,4 +9,4 @@ data:
   SERVER_URL: "https://crm.i.wheelmap.tech:443"
   TELEMETRY_ENABLED: "false"
   SIGN_IN_PREFILLED: "false"
-
+  STORAGE_TYPE: "s3"
