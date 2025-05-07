@@ -33,6 +33,16 @@ spec:
                 secretKeyRef:
                   name: tokens
                   key: accessToken
+            - name: PGUSER
+              valueFrom:
+                secretKeyRef:
+                  name: app.acid-app.credentials.postgresql.acid.zalan.do
+                  key: username
+            - name: PGPASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app.acid-app.credentials.postgresql.acid.zalan.do
+                  key: password
           envFrom:
             - configMapRef:
                 name: twentycrm-env

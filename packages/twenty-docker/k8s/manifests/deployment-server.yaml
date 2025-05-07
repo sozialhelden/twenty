@@ -43,6 +43,16 @@ spec:
               value: "7d"
             - name: "LOGIN_TOKEN_EXPIRES_IN"
               value: "1h"
+            - name: "PGUSER"
+              valueFrom:
+                secretKeyRef:
+                  name: app.acid-app.credentials.postgresql.acid.zalan.do
+                  key: username
+            - name: "PGPASSWORD"
+              valueFrom:
+                secretKeyRef:
+                  name: app.acid-app.credentials.postgresql.acid.zalan.do
+                  key: password
             - name: APP_SECRET
               valueFrom:
                 secretKeyRef:
