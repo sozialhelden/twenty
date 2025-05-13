@@ -12,8 +12,8 @@ spec:
     - superuser
     app: # roles for application foo
     - createdb
-  databases:
-    app: app  # dbname: owner
+  # databases:
+  #   app: app  # dbname: owner
   enableMasterLoadBalancer: false
   enableReplicaLoadBalancer: false
   postgresql:
