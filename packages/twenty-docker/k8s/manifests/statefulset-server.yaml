@@ -40,8 +40,6 @@ spec:
               value: "3000"
             - name: SIGN_IN_PREFILLED
               value: "false"
-            - name: STORAGE_TYPE
-              value: "local"
             - name: "ACCESS_TOKEN_EXPIRES_IN"
               value: "7d"
             - name: "LOGIN_TOKEN_EXPIRES_IN"
@@ -62,11 +60,11 @@ spec:
               protocol: TCP
           resources:
             requests:
-              memory: "256Mi"
+              memory: "512Mi"
               cpu: "250m"
             limits:
-              memory: "2048Mi"
-              cpu: "1000m"
+              memory: "1024Mi"
+              cpu: "250m"
           stdin: true
           tty: true
           volumeMounts:

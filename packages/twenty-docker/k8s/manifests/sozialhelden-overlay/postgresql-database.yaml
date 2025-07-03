@@ -32,8 +32,8 @@ spec:
     effect: PreferNoSchedule
   resources:
     limits:
-      cpu: 4000m
-      memory: 4Gi
+      cpu: 500m
+      memory: 512Mi
     requests:
       cpu: 500m
       memory: 100Mi

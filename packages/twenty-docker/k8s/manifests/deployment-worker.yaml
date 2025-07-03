@@ -43,11 +43,11 @@ spec:
             - worker:prod
           resources:
             requests:
-              memory: "1024Mi"
+              memory: "512Mi"
               cpu: "250m"
             limits:
-              memory: "2048Mi"
-              cpu: "1000m"
+              memory: "1024Mi"
+              cpu: "250m"
           stdin: true
           tty: true
       dnsPolicy: ClusterFirst
