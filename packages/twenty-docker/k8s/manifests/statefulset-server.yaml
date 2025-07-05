@@ -18,6 +18,8 @@ spec:
       labels:
         app: twentycrm-server
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: cheap-lower-performance
       initContainers:
         - name: init-container
           image: busybox

@@ -21,6 +21,8 @@ spec:
       labels:
         app: twentycrm-worker
     spec:
+      nodeSelector:
+        doks.digitalocean.com/node-pool: cheap-lower-performance
       containers:
         - name: twentycrm
           image: twentycrm/twenty:latest
