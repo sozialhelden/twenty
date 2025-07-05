@@ -60,11 +60,10 @@ spec:
               protocol: TCP
           resources:
             requests:
-              memory: "512Mi"
-              cpu: "250m"
+              memory: "656Mi"
+              cpu: "10m"
             limits:
-              memory: "1024Mi"
-              cpu: "250m"
+              memory: "656Mi"
           stdin: true
           tty: true
           volumeMounts:
