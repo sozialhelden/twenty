@@ -36,3 +36,5 @@ spec:
     requests:
       cpu: 10m
       memory: 400Mi
+  nodeSelector:
+    doks.digitalocean.com/node-pool: cheap-lower-performance
