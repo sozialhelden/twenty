@@ -46,10 +46,9 @@ spec:
           resources:
             requests:
               memory: "512Mi"
-              cpu: "250m"
+              cpu: "10m"
             limits:
               memory: "1024Mi"
-              cpu: "250m"
           stdin: true
           tty: true
       dnsPolicy: ClusterFirst
